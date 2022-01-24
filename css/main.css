@@ -1,0 +1,114 @@
+/*
+
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
+@import url('https://hello.myfonts.net/count/41bdbc');
+@font-face {
+  font-family: 'FeltThat';
+  src: url('fonts/FeltThat/font.woff2') format('woff2'),
+    url('fonts/FeltThat/font.woff') format('woff');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #2e646b;
+  --secondary: #b8e650;
+  --neutral-dark: #545a5d;
+  --neutral-light: #f3f3f2;
+  --font-accent: 'FeltThat', 'Roboto Slab', serif;
+  --font-secondary: 'Roboto Slab', 'Times New Roman', Georgia, serif;
+  --font-primary: 'Lato', Helvetica, Arial, sans-serif;
+}
+
+body {
+  font-size: 18px;
+  font-family: var(--font-primary);
+  color: var(--neutral-dark);
+}
+
+.header {
+  background: var(--primary);
+  color: #fff;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding-top: 1em;
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.logo {
+  text-indent: -999em;
+  min-width: 350px;
+  min-height: 100px;
+  background: url(../img/logo-tall.svg) no-repeat top center;
+}
+
+.nav__list::before {
+  content: '';
+  background: url(../img/icon-menu.svg) no-repeat center center;
+  background-size: contain;
+  text-align: center;
+  line-height: 1;
+  height: 25px;
+  width: 25px;
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.nav_list--open::before {
+  background: url(../img/icon-close.svg) no-repeat center center;
+}
+
+.nav__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 2px solid var(--secondary);
+  padding-top: 1em;
+}
+
+.nav__item {
+  text-align: center;
+  list-style: none;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.nav__item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.nav__item--social {
+  grid-column-start: auto;
+  grid-column-end: auto;
+  background: var(--secondary);
+  margin-top: 1em;
+}
+
+.nav__item--social:hover {
+}
+
+.nav__link {
+  color: #fff;
+  font-family: var(--font-secondary);
+  text-decoration: none;
+  display: block;
+  padding: 0.2em;
+}
+
+.nav__link--social {
+  color: var(--primary);
+  padding: 0.25em 0 0;
+}
+
+.nav__link--social svg {
+  fill: var(--primary);
+}
