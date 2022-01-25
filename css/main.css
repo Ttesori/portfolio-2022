@@ -50,29 +50,43 @@ body {
   background: url(../img/logo-tall.svg) no-repeat top center;
 }
 
-.nav__list::before {
-  content: '';
+.nav-toggle {
+  text-indent: -999em;
   background: url(../img/icon-menu.svg) no-repeat center center;
-  background-size: contain;
+  background-size: 24px 24px;
   text-align: center;
   line-height: 1;
-  height: 25px;
-  width: 25px;
+  height: 35px;
+  width: 35px;
   top: 10px;
   right: 10px;
   position: absolute;
   cursor: pointer;
+  border: 0;
+  display: none;
 }
 
-.nav_list--open::before {
+.nav-toggle--display {
+  display: block;
+}
+
+.nav-toggle--open {
   background: url(../img/icon-close.svg) no-repeat center center;
+  background-size: 20px 20px;
+}
+
+.nav {
+  border-top: 2px solid var(--secondary);
 }
 
 .nav__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-top: 2px solid var(--secondary);
   padding-top: 1em;
+}
+
+.nav__list--closed {
+  display: none;
 }
 
 .nav__item {
