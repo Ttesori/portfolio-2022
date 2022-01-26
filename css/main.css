@@ -3,12 +3,12 @@
 
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@500&display=swap');
 @import url('https://hello.myfonts.net/count/41bdbc');
 @font-face {
   font-family: 'FeltThat';
-  src: url('fonts/FeltThat/font.woff2') format('woff2'),
-    url('fonts/FeltThat/font.woff') format('woff');
+  src: url('/fonts/FeltThat/font.woff2') format('woff2'),
+    url('/fonts/FeltThat/font.woff') format('woff');
 }
 
 * {
@@ -33,6 +33,61 @@ body {
   color: var(--neutral-dark);
 }
 
+p {
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.btn {
+  border: 0;
+  padding: 0.55em 1em;
+  font-family: var(--font-secondary);
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+  font-size: 0.85rem;
+  border-radius: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.65em;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  outline: 3px solid var(--secondary);
+  transform: scale(1.05);
+}
+
+.btn .far,
+.btn .fab,
+.btn .fas {
+  color: var(--secondary);
+  font-size: 1.25em;
+  padding-right: 0.25em;
+}
+
 .header {
   background: var(--primary);
   color: #fff;
@@ -40,7 +95,7 @@ body {
   grid-template-rows: auto 1fr;
   padding-top: 1em;
   position: relative;
-  margin-bottom: 1em;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
@@ -94,10 +149,11 @@ body {
   list-style: none;
   grid-column-start: 1;
   grid-column-end: 4;
+  transition: all 0.2s;
 }
 
 .nav__item:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--secondary);
 }
 
 .nav__item--social {
@@ -105,9 +161,13 @@ body {
   grid-column-end: auto;
   background: var(--secondary);
   margin-top: 1em;
+  font-size: 1.25rem;
+  padding-bottom: 0.25em;
+  transition: all 0.2s;
 }
 
 .nav__item--social:hover {
+  background: #fff;
 }
 
 .nav__link {
@@ -118,6 +178,10 @@ body {
   padding: 0.2em;
 }
 
+.nav__link:hover {
+  color: var(--primary);
+}
+
 .nav__link--social {
   color: var(--primary);
   padding: 0.25em 0 0;
@@ -125,4 +189,122 @@ body {
 
 .nav__link--social svg {
   fill: var(--primary);
+}
+
+.hero,
+.main-section {
+  padding: 2em 0;
+  position: relative;
+}
+
+.hero__overlay,
+.work__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: url(../img/bkg-code.jpg);
+  background-size: 800px;
+  background-attachment: fixed;
+  filter: opacity(0.1);
+  z-index: -1;
+}
+
+.work__overlay {
+  background-size: cover;
+}
+
+.hero__content {
+  display: grid;
+  grid-content-rows: auto;
+}
+
+.hero__title {
+  font-family: var(--font-accent);
+  font-size: 3.25rem;
+  color: var(--primary);
+  text-align: center;
+}
+
+.hero__copy {
+  text-align: center;
+  padding: 0 2em;
+  margin-bottom: 1em;
+}
+
+.hero__img {
+  display: none;
+}
+
+.btn--hero {
+  font-size: 1.1rem;
+  margin: 0 auto;
+}
+
+.main-section {
+  padding: 1.5em;
+}
+
+.main-section--full {
+  padding: 1.5em 0;
+}
+
+.section__title {
+  font-family: var(--font-accent);
+  font-size: 2.75rem;
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 0.25em;
+}
+
+.section__subtitle {
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 0.25em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section__divider {
+  margin-bottom: 1em;
+  border: 0;
+  border-top: 2px solid var(--neutral-light);
+}
+
+.main-section p {
+  text-align: center;
+  margin-bottom: 0.65em;
+}
+
+.about__section {
+  margin-bottom: 2em;
+}
+
+.copy__first-line {
+  font-family: var(--font-secondary);
+  color: var(--primary);
+}
+
+.skills-list {
+  margin: 1em;
+  list-style: none;
+}
+
+.skills-list__item {
+  margin-bottom: 0.25em;
+}
+
+.skills-list__item i {
+  background: var(--secondary);
+  color: var(--primary);
+  padding: 0.35em 0.25em 0.25em;
+  margin-right: 0.35em;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 50%;
 }
