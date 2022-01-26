@@ -16,7 +16,9 @@
   <header class="header">
     <h1 class="logo">Tesori Design &amp; Development</h1>
     <nav class="nav nav--primary">
-      <button class="nav-toggle nav-toggle--open">Menu</button>
+      <button class="nav-toggle nav-toggle--open">
+        <span class="sr-only">Menu</span>
+      </button>
       <ul class="nav__list">
         <li class="nav__item"><a href="#home" class="link nav__link">Home</a></li>
         <li class="nav__item"><a href="#about" class="link nav__link">About</a></li>
@@ -64,25 +66,41 @@
         <p><span class="copy__first-line">From floats to Flexbox,</span> REST to React, I'm looking forward to learning
           your stack
           and helping your team succeed!</p>
-        <button class="btn btn--about">
-          <i class="far fa-file-alt"></i>
-          Download Resume (PDF)</button>
-        <button class="btn btn--text">
-          <i class="fas fa-external-link-alt"></i>
-          View Profile on LinkedIn</button>
+        <aside class="section__links">
+          <button class="btn btn--about">
+            <i class="far fa-file-alt"></i>
+            Download Resume (PDF)</button>
+          <button class="btn btn--text">
+            <i class="fas fa-external-link-alt"></i>
+            View Profile on LinkedIn</button>
+
+        </aside>
+
       </div>
       <div class="about__section">
         <hr class="section__divider">
-        <h3 class="section__subtitle">My Skills</h3>
+        <h3 class="section__subtitle">Skills &amp; Interests</h3>
         <ul class="skills-list">
-          <li class="skills-list__item"><i class="fab fa-js"></i> JavaScript</li>
-          <li class="skills-list__item"><i class="fab fa-react"></i> React</li>
-          <li class="skills-list__item"><i class="fab fa-node-js"></i> NodeJS</li>
-          <li class="skills-list__item"><i class="fas fa-database"></i> MongoDB</li>
+          <li class="skills-list__item"><i class="fab fa-js"></i> JavaScript
+            <span class="skills-list__desc">(5 years)</span>
+          </li>
+          <li class="skills-list__item"><i class="fab fa-react"></i> React
+            <span class="skills-list__desc">(2 years)</span>
+          </li>
+          <li class="skills-list__item"><i class="fab fa-node-js"></i> NodeJS
+            <span class="skills-list__desc">(2 years)</span>
+          </li>
+          <li class="skills-list__item"><i class="fas fa-database"></i> MongoDB
+            <span class="skills-list__desc">(2 years)</span>
+          </li>
           <li class="skills-list__item"><i class="fas fa-paint-brush"></i>
-            UI/UX Design</li>
+            UI/UX Design
+            <span class="skills-list__desc">(5 years)</span>
+          </li>
           <li class="skills-list__item"><i class="fab fa-accessible-icon"></i>
-            Web Accessibility</li>
+            Web Accessibility
+            <span class="skills-list__desc">(3 years)</span>
+          </li>
         </ul>
       </div>
     </section>
