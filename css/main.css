@@ -290,7 +290,7 @@ h3 {
 }
 
 .main-section--full {
-  padding: 1.5em 0;
+  padding: 2em 0;
 }
 
 .section__title {
@@ -311,7 +311,7 @@ h3 {
 }
 
 .section__divider {
-  margin-bottom: 1em;
+  margin: 1.5em;
   border: 0;
   border-top: 2px solid var(--neutral-light);
 }
@@ -323,10 +323,6 @@ h3 {
 .main-section p {
   text-align: center;
   margin-bottom: 0.65em;
-}
-
-.about__section {
-  margin-bottom: 2em;
 }
 
 .copy__first-line {
@@ -364,7 +360,13 @@ h3 {
 }
 
 .portfolio-item {
-  margin: 1em 1em 2em;
+  margin: 1em 1.5em;
+  padding: 1em 0 1.5em;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.07);
+}
+
+.portfolio-item:first-child {
+  margin-top: 0;
 }
 
 .portfolio__image {
@@ -379,7 +381,7 @@ h3 {
   color: var(--primary);
   text-align: center;
   font-size: 1.35rem;
-  margin: 0.65em 0 0.35em;
+  margin: 0.85em 0 0.35em;
 }
 
 .portfolio-item__technologies {
@@ -390,6 +392,7 @@ h3 {
 }
 
 .portfolio-item__links {
+  margin-top: 1.25em;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
