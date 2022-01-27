@@ -18,6 +18,7 @@
 }
 
 :root {
+  --primary-lt: #3b818a;
   --primary: rgb(46, 100, 107);
   --primary-50: rgba(46, 100, 107, 0.5);
   --primary-25: rgba(46, 100, 107, 0.25);
@@ -75,6 +76,7 @@ h3 {
   display: block;
   margin: 0 auto;
   margin-bottom: 0.65em;
+  text-decoration: none;
 }
 
 .btn--text {
@@ -359,4 +361,36 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 1px;
   padding-left: 0.5em;
+}
+
+.portfolio-item {
+  margin: 1em 1em 2em;
+}
+
+.portfolio__image {
+  border: 10px solid white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.portfolio-item__title {
+  font-family: var(--font-secondary);
+  color: var(--primary);
+  text-align: center;
+  font-size: 1.35rem;
+  margin: 0.65em 0 0.35em;
+}
+
+.portfolio-item__technologies {
+  font-family: var(--font-secondary);
+  color: var(--primary-lt);
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.portfolio-item__links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
 }
