@@ -33,6 +33,10 @@
   --font-primary: 'Lato', Helvetica, Arial, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 18px;
   font-family: var(--font-primary);
@@ -476,6 +480,11 @@ h3 {
 
 #contact .icon-list__item {
   text-align: center;
+}
+
+.message--required {
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
 .contact__form {
