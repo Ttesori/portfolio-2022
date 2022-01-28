@@ -14,8 +14,22 @@ const setUpMenu = () => {
 }
 
 const toggleMenu = () => {
-  els.navList.classList.toggle('nav__list--closed');
-  els.navToggle.classList.toggle('nav-toggle--open');
+  if (els.navList.classList.contains('nav__list--closed')) {
+    openMenu();
+  } else {
+    closeMenu();
+  }
+}
+
+const closeMenu = () => {
+  els.navList.classList.remove('nav__list--open');
+  els.navList.classList.add('nav__list--closed');
+  els.navToggle.classList.remove('nav-toggle--open');
+}
+const openMenu = () => {
+  els.navList.classList.remove('nav__list--closed');
+  els.navList.classList.add('nav__list--open');
+  els.navToggle.classList.add('nav-toggle--open');
 }
 
 init();
