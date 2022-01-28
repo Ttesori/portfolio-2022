@@ -24,15 +24,19 @@
         <li class="nav__item"><a href="#about" class="link nav__link">About</a></li>
         <li class="nav__item"><a href="#work" class="link nav__link">Work</a></li>
         <li class="nav__item"><a href="#contact" class="link nav__link">Contact</a></li>
-        <li class="nav__item nav__item--social"><a href="#" class="link nav__link nav__link--social">
+        <li class="nav__item nav__item--social">
+          <a href="https://twitter.com/ttesori" class="link nav__link nav__link--social">
             <i class="fab fa-twitter"></i>
             <span class="sr-only">Twitter</span>
-          </a></li>
-        <li class="nav__item nav__item--social"><a href="#" class="link nav__link nav__link--social">
+          </a>
+        </li>
+        <li class="nav__item nav__item--social"><a href="https://www.linkedin.com/in/tonitesori/"
+            class="link nav__link nav__link--social">
             <i class="fab fa-linkedin-in"></i>
             <span class="sr-only">LinkedIn</span>
           </a></li>
-        <li class="nav__item nav__item--social"><a href="#" class="link nav__link nav__link--social">
+        <li class="nav__item nav__item--social"><a href="https://github.com/Ttesori"
+            class="link nav__link nav__link--social">
             <i class="fab fa-github"></i>
             <span class="sr-only">GitHub</span>
           </a></li>
@@ -45,9 +49,9 @@
       <h2 class="hero__title">👋 Hi, I'm Toni!</h2>
       <p class="hero__copy"><strong>Developer.</strong> Semantic HTML geek. <strong>Centerer of
           &lt;div&gt;s.</strong> Lover of code.</p>
-      <button class="btn btn--hero">
+      <a class="btn btn--hero" href="#contact">
         <i class="far fa-arrow-alt-circle-down"></i>
-        Get in Touch</button>
+        Get in Touch</a>
     </div>
     <div class="hero__content">
       <img src="img/toni-photo.jpg" alt="Photo of a woman with glasses against a lime green background."
@@ -80,26 +84,26 @@
       <div class="about__section">
         <hr class="section__divider">
         <h3 class="section__subtitle">Skills &amp; Interests</h3>
-        <ul class="skills-list">
-          <li class="skills-list__item"><i class="fab fa-js"></i> JavaScript
-            <span class="skills-list__desc">(5 years)</span>
+        <ul class="icon-list">
+          <li class="icon-list__item"><i class="fab fa-js"></i> JavaScript
+            <span class="icon-list__desc">(5 years)</span>
           </li>
-          <li class="skills-list__item"><i class="fab fa-react"></i> React
-            <span class="skills-list__desc">(2 years)</span>
+          <li class="icon-list__item"><i class="fab fa-react"></i> React
+            <span class="icon-list__desc">(2 years)</span>
           </li>
-          <li class="skills-list__item"><i class="fab fa-node-js"></i> NodeJS
-            <span class="skills-list__desc">(2 years)</span>
+          <li class="icon-list__item"><i class="fab fa-node-js"></i> NodeJS
+            <span class="icon-list__desc">(2 years)</span>
           </li>
-          <li class="skills-list__item"><i class="fas fa-database"></i> MongoDB
-            <span class="skills-list__desc">(2 years)</span>
+          <li class="icon-list__item"><i class="fas fa-database"></i> MongoDB
+            <span class="icon-list__desc">(2 years)</span>
           </li>
-          <li class="skills-list__item"><i class="fas fa-paint-brush"></i>
+          <li class="icon-list__item"><i class="fas fa-paint-brush"></i>
             UI/UX Design
-            <span class="skills-list__desc">(5 years)</span>
+            <span class="icon-list__desc">(5 years)</span>
           </li>
-          <li class="skills-list__item"><i class="fab fa-accessible-icon"></i>
+          <li class="icon-list__item"><i class="fab fa-accessible-icon"></i>
             Web Accessibility
-            <span class="skills-list__desc">(3 years)</span>
+            <span class="icon-list__desc">(3 years)</span>
           </li>
         </ul>
       </div>
@@ -115,7 +119,8 @@
           </figure>
           <h3 class="portfolio-item__title">GroceryMapper</h3>
           <h4 class="portfolio-item__technologies">React, Firebase, Tailwind</h4>
-          <p class="portfolio-item__description">GroceryMapper allows users to streamline their grocery shopping by
+          <p class="portfolio-item__description"><span class="copy__first-line">GroceryMapper</span> helps shoppers
+            streamline their grocery shopping experience by
             putting their list in the order they shop.</p>
           <footer class="portfolio-item__links">
             <a href="https://grocerymap.app/" class="btn portfolio-item__link ">
@@ -134,7 +139,8 @@
           </figure>
           <h3 class="portfolio-item__title">ExpenseTracker</h3>
           <h4 class="portfolio-item__technologies">NodeJS, Express, MongoDB</h4>
-          <p class="portfolio-item__description">ExpenseTracker allows users to categorize and track expenses as well as
+          <p class="portfolio-item__description"><span class="copy__first-line">ExpenseTracker</span> allows users to
+            categorize and track expenses as well as
             generate reports to see how their money is being spent.</p>
           <footer class="portfolio-item__links">
             <a href="https://expense-tracker-tt.herokuapp.com/" class="btn portfolio-item__link ">
@@ -153,7 +159,8 @@
           </figure>
           <h3 class="portfolio-item__title">MathChamp</h3>
           <h4 class="portfolio-item__technologies">JavaScript, HTML, CSS</h4>
-          <p class="portfolio-item__description">MathChamp helps kids practice their addition, subtraction,
+          <p class="portfolio-item__description"><span class="copy__first-line">MathChamp</span> helps kids practice
+            their addition, subtraction,
             multiplication and division math facts. It includes multiple ways to adjust difficulty and a scoreboard to
             track progress!</p>
           <footer class="portfolio-item__links">
@@ -168,20 +175,55 @@
       </div>
     </section>
 
-    <footer id="contact">
+    <section id="contact" class="main-section">
       <div class="contact__section">
         <h2 class="section__title">Contact Me</h2>
-        <p class="section__copy"> I am currently open for full-time and part-time remote development positions with
-          organizations making a positive difference in the world. Get in touch to see if my skillset is a good match
+        <p class="section__copy"><span class="copy__first-line">I am currently available</span> for full-time and
+          part-time
+          remote development positions with
+          organizations making a positive difference in the world. Reach out below to see whether my skillset is a good
+          match
           for your team! </p>
-        <ul class="contact-links">
-          <li class="contact-link__item"><a href="#" class="contact-link__link">Twitter</a></li>
-          <li class="contact-link__item"><a href="#" class="contact-link__link">LinkedIn</a></li>
-          <li class="contact-link__item"><a href="#" class="contact-link__link">GitHub</a></li>
+        <ul class="icon-list icon-list--contact">
+          <li class="icon-list__item"><a href="https://twitter.com/ttesori" class="icon-list__link">
+              <i class="fab fa-twitter"></i>
+              <span class="sr-only">
+                Twitter
+              </span>
+            </a></li>
+          <li class="icon-list__item"><a href="https://www.linkedin.com/in/tonitesori/" class="icon-list__link">
+              <i class="fab fa-linkedin"></i>
+              <span class="sr-only">
+                LinkedIn
+              </span></a></li>
+          <li class="icon-list__item"><a href="https://github.com/Ttesori" class="icon-list__link">
+              <i class="fab fa-github"></i>
+              <span class="sr-only">
+                GitHub
+              </span></a></li>
         </ul>
       </div>
+      <div class="contact__section">
+        <form class="form contact__form">
+          <div class="form__input-group">
+            <label for="name" class="form__label">Name</label>
+            <input type="text" id="name" name="name" class="form__input-text">
+          </div>
+          <div class="form__input-group">
+            <label for="email" class="form__label">Email Address</label>
+            <input type="email" name="email" id="email" class="form__input-text">
+          </div>
+          <div class="form__input-group">
+            <label for="message" class="form__label">Message</label>
+            <textarea id="message" name="message" class="form__textarea"></textarea>
+          </div>
+          <button class="btn btn--lg">
+            <i class="fas fa-paper-plane"></i>
+            Send Form</button>
+        </form>
+      </div>
 
-    </footer>
+    </section>
   </main>
 
   <footer class="footer">

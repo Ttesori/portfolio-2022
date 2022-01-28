@@ -25,6 +25,7 @@
   --secondary: #b8e650;
   --neutral-dark: #545a5d;
   --neutral-50: rgba(84, 90, 93, 0.5);
+  --neutral-25: rgba(84, 90, 93, 0.25);
   --neutral-light: #f3f3f2;
   --font-accent: 'FeltThat', 'Roboto Slab', serif;
   --font-secondary: 'Roboto Slab', 'Times New Roman', Georgia, serif;
@@ -84,6 +85,10 @@ h3 {
   color: var(--primary);
   text-decoration: underline var(--primary-25) 2px;
   text-underline-offset: 3px;
+}
+
+.btn--lg {
+  font-size: 1.1rem;
 }
 
 .btn:hover,
@@ -280,7 +285,6 @@ h3 {
 }
 
 .btn--hero {
-  font-size: 1.1rem;
   margin: 0 auto;
 }
 
@@ -330,16 +334,16 @@ h3 {
   color: var(--primary);
 }
 
-.skills-list {
+.icon-list {
   margin: 1em;
   list-style: none;
 }
 
-.skills-list__item {
+.icon-list__item {
   margin-bottom: 0.25em;
 }
 
-.skills-list__item i {
+.icon-list__item i {
   background: var(--secondary);
   color: var(--primary);
   padding: 0.35em 0.25em 0.25em;
@@ -351,7 +355,7 @@ h3 {
   border-radius: 50%;
 }
 
-.skills-list__desc {
+.icon-list__desc {
   font-size: 0.8rem;
   color: var(--neutral-50);
   text-transform: uppercase;
@@ -367,6 +371,11 @@ h3 {
 
 .portfolio-item:first-child {
   margin-top: 0;
+}
+
+.portfolio-item:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
 }
 
 .portfolio__image {
@@ -396,4 +405,57 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
+}
+
+.icon-list--contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#contact .icon-list__item {
+  text-align: center;
+}
+
+.form__input-group {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  margin-bottom: 0.75em;
+  justify-content: center;
+}
+.form__label {
+  color: var(--primary);
+  font-family: var(--font-secondary);
+  margin-bottom: 0.25em;
+  text-align: center;
+}
+
+.form__input-text,
+.form__textarea {
+  border: 2px solid var(--neutral-25);
+  border-radius: 0.5em;
+  min-width: 250px;
+  font-size: 1rem;
+  padding: 0.5em 0.75em;
+  color: var(--neutral-dark);
+}
+
+.form__textarea {
+  height: 75px;
+}
+
+.footer {
+  background: var(--primary);
+  padding: 1em;
+  margin-top: 3em;
+  text-align: center;
+}
+
+.contact__section .btn--lg {
+  margin-top: 1.5em;
+}
+
+.contact__form {
+  border-top: 3px solid rgba(0, 0, 0, 0.07);
+  margin-top: 1.5em;
+  padding-top: 1.5em;
 }
