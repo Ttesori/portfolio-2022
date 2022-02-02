@@ -631,7 +631,10 @@ h3 {
     font-size: 3.75rem;
   }
 
-  .hero__copy {
+  .hero__copy,
+  .section__copy,
+  .section__links,
+  .contact__section {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -646,9 +649,10 @@ h3 {
     grid-template-columns: 1fr 1fr;
   }
   .icon-list--skills {
-    margin: 1em 0;
+    margin: 1em auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    max-width: 650px;
   }
 
   .portfolio-item {
@@ -673,5 +677,77 @@ h3 {
   .btn--send {
     grid-column-start: 1;
     grid-column-end: 3;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .header {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    justify-content: center;
+    padding: 2em 4em 0.5em;
+    column-gap: 2em;
+    border-bottom: 2px solid var(--secondary);
+  }
+  .logo {
+    background: url('../img/logo-wide.svg') top left no-repeat;
+    background-size: contain;
+    min-height: auto;
+    height: auto;
+    min-width: auto;
+    max-width: 325px;
+    margin: 0;
+  }
+  .nav {
+    align-self: end;
+    background: none;
+    padding-bottom: 1em;
+    margin-top: 0.4em;
+  }
+  .nav__list {
+    padding: 0;
+  }
+  .nav__link {
+    color: white;
+  }
+  .nav__link--social {
+    color: var(--secondary);
+  }
+
+  .hero .container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 2em;
+    justify-content: center;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .hero__img {
+    display: block;
+    border-radius: 50%;
+    border: 8px solid white;
+    box-shadow: 3px 3px 5px rgba(46, 100, 107, 0.35);
+    max-width: 300px;
+  }
+
+  .about {
+    max-width: 1060px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    column-gap: 4em;
+  }
+
+  .about .section__divider,
+  .icon-list__desc,
+  .about .section__subtitle {
+    display: none;
+  }
+
+  .main-section p {
+    max-width: auto;
+    text-align: left;
   }
 }
