@@ -401,21 +401,22 @@ h3 {
   letter-spacing: 1px;
   padding-left: 0.5em;
 }
-
-.about:before,
+.hero:after,
 .contact:before,
-.about:after {
+.work:before {
   content: '';
   border-bottom: 2px solid var(--secondary);
   height: 0px;
   position: absolute;
-  top: -1em;
+  top: -0.5em;
   left: 0;
   right: 0;
 }
-.about:after {
+
+.about:after,
+.hero:after {
   top: auto;
-  bottom: -1em;
+  bottom: -0.5em;
   left: 0;
   right: 0;
 }
@@ -736,7 +737,7 @@ h3 {
     max-width: 1060px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 4fr 3fr;
+    grid-template-columns: 5fr 3fr;
     column-gap: 4em;
   }
 
@@ -746,8 +747,52 @@ h3 {
     display: none;
   }
 
-  .main-section p {
+  main p {
     max-width: auto;
     text-align: left;
+  }
+
+  .about {
+    padding-top: 3em;
+  }
+
+  .about__section {
+    display: grid;
+    grid-template-rows: auto;
+    align-items: center;
+  }
+  .about__section .section__links {
+    gap: 1em;
+  }
+
+  .icon-list--skills {
+    grid-template-columns: auto;
+    gap: 0.5em;
+  }
+  .icon-list__desc {
+    display: inline-block;
+  }
+
+  .portfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4em;
+    align-items: top;
+  }
+  .portfolio-item {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .portfolio .portfolio-item__description {
+    text-align: center;
+  }
+  .contact {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 3em;
+  }
+  .contact__form {
+    display: block;
   }
 }
