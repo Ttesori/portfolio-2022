@@ -402,7 +402,7 @@ h3 {
   padding-left: 0.5em;
 }
 .hero:after,
-.contact:before,
+.portfolio:after,
 .work:before {
   content: '';
   border-bottom: 2px solid var(--secondary);
@@ -414,7 +414,8 @@ h3 {
 }
 
 .about:after,
-.hero:after {
+.hero:after,
+.portfolio:after {
   top: auto;
   bottom: -0.5em;
   left: 0;
@@ -734,7 +735,7 @@ h3 {
   }
 
   .about {
-    max-width: 1060px;
+    max-width: 1100px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 5fr 3fr;
@@ -775,9 +776,11 @@ h3 {
 
   .portfolio {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 4em;
     align-items: top;
+    max-width: 1100px;
+    margin: 0 auto;
   }
   .portfolio-item {
     margin: 0;
@@ -789,10 +792,32 @@ h3 {
   }
   .contact {
     display: grid;
-    grid-template-columns: 2fr 3fr;
-    gap: 3em;
+    grid-template-columns: 3fr 2fr;
+    gap: 4em;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .contact__section:first-child {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .contact__section--form {
+    background: rgba(46, 100, 107, 0.05);
+    border-radius: 1em;
+    padding: 1.5em;
   }
   .contact__form {
-    display: block;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+  .input-group--message,
+  .btn--send {
+    grid-column-start: auto;
+    grid-column-end: auto;
+  }
+  .btn--send {
+    align-self: center;
   }
 }
