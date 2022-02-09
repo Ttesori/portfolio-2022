@@ -531,10 +531,11 @@ h3 {
 
 .footer {
   background: var(--primary);
-  padding: 2em 0 1em;
+  padding: 2em 0 1.5em;
   margin-top: 3em;
   text-align: center;
   position: relative;
+  border-bottom: 10px solid var(--secondary);
 }
 
 .contact__section .btn--lg {
@@ -708,14 +709,31 @@ h3 {
   }
   .nav__list {
     padding: 0;
+    gap: 1em;
   }
   .nav__link {
     color: white;
   }
-  .nav__link--social {
-    color: var(--secondary);
+  .nav__link:hover {
+    color: white;
   }
 
+  .nav__item {
+    border-bottom: 3px solid transparent;
+  }
+  .nav__item:hover {
+    background: none;
+    transform: scale(1.05);
+    border-bottom: 3px solid var(--secondary);
+  }
+  .nav__link--social {
+    color: var(--secondary);
+    transition: color 0.2s;
+  }
+  .nav__item--social:hover {
+    border-bottom-color: transparent;
+    transform: scale(1.1);
+  }
   .hero .container {
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -797,6 +815,8 @@ h3 {
     max-width: 1100px;
     margin: 0 auto;
     align-items: center;
+    padding-left: 0;
+    padding-right: 0;
   }
   .contact__section:first-child {
     border: 0;
@@ -804,7 +824,7 @@ h3 {
     padding: 0;
   }
   .contact__section--form {
-    background: rgba(46, 100, 107, 0.05);
+    background: var(--neutral-light);
     border-radius: 1em;
     padding: 1.5em;
   }
