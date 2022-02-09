@@ -838,6 +838,9 @@ h3 {
     background: var(--neutral-light);
     border-radius: 1em;
     padding: 1.5em;
+    border: 5px solid white;
+    outline: 2px solid rgba(184, 230, 80, 0.7);
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
   }
   .contact__form {
     grid-template-columns: 1fr 1fr;
