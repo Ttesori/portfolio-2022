@@ -1,7 +1,1 @@
-- Add hover states for form fields
-- Add focus states for form fields
-- Add icon before Send a Message
-- Increase contact icon size on desktop
-- Link portfolio images
-- Increase intro heading on desktop
 - Make nav sticky and indicate current location

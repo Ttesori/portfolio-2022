@@ -21,8 +21,8 @@
           <span class="sr-only">Menu</span>
         </button>
         <ul class="nav__list">
-          <li class="nav__item"><a href="#home" class="link nav__link">Home</a></li>
-          <li class="nav__item"><a href="#about" class="link nav__link">About</a></li>
+          <li class="nav__item"><a href="#home" class="link nav__link nav__link--active">Home</a></li>
+          <li class="nav__item"><a href="#about" class="link nav__link ">About</a></li>
           <li class="nav__item"><a href="#work" class="link nav__link">Work</a></li>
           <li class="nav__item"><a href="#contact" class="link nav__link">Contact</a></li>
           <li class="nav__item nav__item--social">
@@ -52,7 +52,8 @@
         <h2 class="hero__title">👋 Hi, I'm Toni!</h2>
         <p class="hero__copy">I'm a <span class="copy__first-line">full-stack web developer</span> who geeks out over
           semantic HTML and loves centering
-          &lt;div&gt;s!</p>
+          <code>&lt;div&gt;</code>s!
+        </p>
         <a class="btn btn--hero" href="#contact">
           <i class="far fa-arrow-alt-circle-down"></i>
           Get in Touch</a>
@@ -72,7 +73,7 @@
           ago,
           when I taught myself to code to create
           my own website. The web has changed a lot since then, and I have experience navigating it all with a wide
-          variety of organizations.</p>
+          variety of technologies and organizations.</p>
         <p class="section__copy"><span class="copy__first-line">From floats to Flexbox,</span> REST to React, I look
           forward to learning
           your stack
@@ -122,7 +123,9 @@
       <div class="portfolio">
         <div class="portfolio-item">
           <figure class="portfolio__image-container">
-            <img src="img/grocerymapper.jpg" alt="Screenshot of the GroceryMapper website" class="portfolio__image">
+            <a href="https://grocerymap.app/">
+              <img src="img/grocerymapper.jpg" alt="Screenshot of the GroceryMapper website" class="portfolio__image">
+            </a>
           </figure>
           <h3 class="portfolio-item__title">GroceryMapper</h3>
           <h4 class="portfolio-item__technologies">React, Firebase, Tailwind</h4>
@@ -141,8 +144,10 @@
         </div>
 
         <div class="portfolio-item">
-          <figure class="portfolio__image-container">
-            <img src="img/expensetracker.png" alt="Screenshot of the ExpenseTracker website" class="portfolio__image">
+          <a href="https://expense-tracker-tt.herokuapp.com/">
+            <figure class="portfolio__image-container">
+              <img src="img/expensetracker.png" alt="Screenshot of the ExpenseTracker website" class="portfolio__image">
+          </a>
           </figure>
           <h3 class="portfolio-item__title">ExpenseTracker</h3>
           <h4 class="portfolio-item__technologies">NodeJS, Express, MongoDB</h4>
@@ -162,7 +167,9 @@
 
         <div class="portfolio-item">
           <figure class="portfolio__image-container">
-            <img src="img/mathchamp.png" alt="Screenshot of the MathChamp website" class="portfolio__image">
+            <a href="https://mathchamp.netlify.app/">
+              <img src="img/mathchamp.png" alt="Screenshot of the MathChamp website" class="portfolio__image">
+            </a>
           </figure>
           <h3 class="portfolio-item__title">MathChamp</h3>
           <h4 class="portfolio-item__technologies">JavaScript, HTML, CSS</h4>
@@ -190,18 +197,18 @@
           organizations making a positive difference in the world. Let's chat to see if my skillset is a good match for
           your team! </p>
         <ul class="icon-list icon-list--contact">
-          <li class="icon-list__item"><a href="https://twitter.com/ttesori" class="icon-list__link">
+          <li><a href="https://twitter.com/ttesori" class="icon-list__link">
               <i class="fab fa-twitter"></i>
               <span class="sr-only">
                 Twitter
               </span>
             </a></li>
-          <li class="icon-list__item"><a href="https://www.linkedin.com/in/tonitesori/" class="icon-list__link">
+          <li class=""><a href="https://www.linkedin.com/in/tonitesori/" class="icon-list__link">
               <i class="fab fa-linkedin"></i>
               <span class="sr-only">
                 LinkedIn
               </span></a></li>
-          <li class="icon-list__item"><a href="https://github.com/Ttesori" class="icon-list__link">
+          <li class=""><a href="https://github.com/Ttesori" class="icon-list__link">
               <i class="fab fa-github"></i>
               <span class="sr-only">
                 GitHub
@@ -209,20 +216,22 @@
         </ul>
       </div>
       <div class="contact__section contact__section--form">
-        <h3 class="section__subtitle">Send a Message</h3>
+        <h3 class="section__subtitle"><i class="fas fa-envelope"></i>
+          Send a Message</h3>
         <p class="message--required">All fields are required.</p>
         <form class="form contact__form">
           <div class="form__input-group">
             <label for="name" class="form__label">Name</label>
-            <input type="text" id="name" name="name" class="form__input-text" placeholder="Your Name">
+            <input type="text" id="name" name="name" class="form__input-text" placeholder="Your Name" required>
           </div>
           <div class="form__input-group">
             <label for="email" class="form__label">Email Address</label>
-            <input type="email" name="email" id="email" class="form__input-text" placeholder="first.last@somewhere.com">
+            <input type="email" name="email" id="email" class="form__input-text" placeholder="first.last@somewhere.com"
+              required>
           </div>
           <div class="form__input-group input-group--message">
             <label for="message" class="form__label">Message</label>
-            <textarea id="message" name="message" class="form__textarea" placeholder="Your message"></textarea>
+            <textarea id="message" name="message" class="form__textarea" placeholder="Your message"></textarea required>
           </div>
           <button class="btn btn--lg btn--send">
             <i class="fas fa-paper-plane"></i>

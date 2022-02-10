@@ -54,6 +54,15 @@ h3 {
   font-weight: normal;
 }
 
+code {
+  background: rgba(0, 0, 0, 0.08);
+  display: inline-block;
+  padding: 0.05em;
+  margin: 0 0.1em;
+  border-radius: 0.2em;
+  font-size: 0.9em;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -135,13 +144,13 @@ h3 {
 .header {
   background: var(--primary);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  padding-top: 1em;
 }
 .header__container {
   color: #fff;
   display: grid;
   grid-template-rows: auto 1fr;
   position: relative;
+  padding-top: 1em;
 }
 
 .logo {
@@ -439,11 +448,26 @@ h3 {
   margin-bottom: 0;
 }
 
+.portfolio__image-container a {
+  display: inline-block;
+}
+
 .portfolio__image {
   border: 10px solid white;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   max-width: 100%;
   object-fit: contain;
+  transition: all 0.2s;
+  outline: 2px solid transparent;
+}
+
+.portfolio__image-container a {
+  line-height: 0;
+}
+.portfolio__image:hover,
+.portfolio__image-container a:focus-visible {
+  outline: 2px solid var(--secondary);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .portfolio-item__title {
@@ -471,22 +495,32 @@ h3 {
 .icon-list--contact {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
 }
 
-.icon-list--contact .icon-list__link .fab {
+.contact .icon-list__item {
+  text-align: center;
+}
+
+.icon-list__link {
+  background: var(--secondary);
+  color: var(--primary);
+  padding: 0.21em;
+  width: 1.7em;
+  height: 1.7em;
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
   transition: all 0.2s;
-  outline: 2px transparent;
+  outline: 2px solid transparent;
 }
-
-.icon-list--contact .icon-list__link:hover .fab {
+.icon-list__link:hover,
+.icon-list__link:focus-visible {
   transform: scale(1.1);
   box-shadow: 0px 0px 8px rgba(46, 100, 107, 0.35);
   outline: 2px solid white;
   background: var(--secondary-lt);
-}
-
-#contact .icon-list__item {
-  text-align: center;
 }
 
 .message--required {
@@ -520,11 +554,24 @@ h3 {
   padding: 0.5em 0.75em;
   color: var(--neutral-dark);
   font-family: var(--font-primary);
+  transition: all 0.2s;
+  outline: none;
 }
 
 .form__input-text::placeholder,
 .form__textarea::placeholder {
   color: var(--neutral-50);
+}
+
+.form__input-text:hover,
+.form__textarea:hover {
+  border: 2px solid var(--secondary);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.form__input-text:focus-visible,
+.form__textarea:focus-visible {
+  border: 2px solid var(--secondary);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 .form__textarea {
@@ -542,6 +589,12 @@ h3 {
 
 .contact__section .btn--lg {
   margin-top: 1.5em;
+}
+
+.contact__section--form .section__subtitle i {
+  color: var(--primary-lt);
+  font-size: 1.25rem;
+  padding-right: 0.2em;
 }
 
 .contact__section:not(:last-child) {
@@ -685,14 +738,24 @@ h3 {
   }
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 980px) {
   h2.section__title {
     font-size: 3.5rem;
+  }
+
+  #home,
+  #about,
+  #work,
+  #contact {
+    scroll-margin-top: 8em;
   }
 
   .header {
     border-bottom: 2px solid var(--secondary);
     padding: 2em 4em 0.5em;
+    position: sticky;
+    top: 0;
+    z-index: 999;
   }
   .header__container {
     max-width: 1200px;
@@ -700,7 +763,7 @@ h3 {
     display: grid;
     grid-template-columns: 2fr 3fr;
     justify-content: center;
-
+    padding-top: 0;
     column-gap: 2em;
   }
   .logo {
@@ -720,7 +783,7 @@ h3 {
   }
   .nav__list {
     padding: 0;
-    gap: 1em;
+    gap: 1.5em;
   }
   .nav__link {
     color: white;
@@ -732,7 +795,8 @@ h3 {
   .nav__item {
     border-bottom: 3px solid transparent;
   }
-  .nav__item:hover {
+  .nav__item:hover,
+  .nav__link--active {
     background: none;
     transform: scale(1.05);
     border-bottom: 3px solid var(--secondary);
@@ -753,6 +817,10 @@ h3 {
     align-items: center;
     max-width: 960px;
     margin: 0 auto;
+  }
+
+  .hero__title {
+    font-size: 4.25rem;
   }
 
   .hero__img {
@@ -805,9 +873,9 @@ h3 {
 
   .portfolio {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 4.25em;
-    align-items: top;
+    justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -816,9 +884,15 @@ h3 {
     padding: 0;
     border: 0;
   }
+  .portfolio-item:last-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: 0 auto;
+  }
   .portfolio .portfolio-item__description {
     text-align: center;
   }
+
   .contact {
     display: grid;
     grid-template-columns: 3fr 2fr;
@@ -826,8 +900,8 @@ h3 {
     max-width: 1100px;
     margin: 0 auto;
     align-items: center;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 1em;
+    padding-right: 1em;
   }
   .contact__section:first-child {
     border: 0;
@@ -853,5 +927,20 @@ h3 {
   }
   .btn--send {
     align-self: center;
+  }
+  .icon-list--contact .icon-list__item i {
+    font-size: 1.9rem;
+    height: 1.55em;
+    width: 1.55em;
+  }
+}
+
+@media screen and (min-width: 1110px) {
+  .portfolio {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .portfolio-item:last-child {
+    grid-column-start: auto;
+    grid-column-end: auto;
   }
 }
