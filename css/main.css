@@ -614,7 +614,10 @@ code {
 
 @media screen and (min-width: 625px) {
   .header {
-    padding-top: 2em;
+    padding-top: 1em;
+    position: sticky;
+    top: 0;
+    z-index: 999;
   }
   .logo {
     background-size: contain;
@@ -663,7 +666,8 @@ code {
     transition: border 0.2s;
   }
 
-  .nav__link:hover {
+  .nav__link:hover,
+  .nav__link--active {
     border-bottom: 3px solid var(--primary);
     color: var(--primary-dk);
   }
@@ -817,6 +821,7 @@ code {
     align-items: center;
     max-width: 960px;
     margin: 0 auto;
+    height: 45vh;
   }
 
   .hero__title {
@@ -839,19 +844,24 @@ code {
     column-gap: 4em;
   }
 
+  .about p {
+    text-align: left;
+  }
+
   .about .section__divider,
   .icon-list__desc,
   .about .section__subtitle {
     display: none;
   }
 
-  main p {
-    max-width: auto;
-    text-align: left;
-  }
-
   .about {
     padding-top: 3em;
+  }
+
+  #about {
+    min-height: 60vh;
+    display: grid;
+    align-items: center;
   }
 
   .about__section {
@@ -869,6 +879,12 @@ code {
   }
   .icon-list__desc {
     display: inline-block;
+  }
+
+  #work {
+    min-height: 80vh;
+    display: grid;
+    align-items: center;
   }
 
   .portfolio {
@@ -928,10 +944,10 @@ code {
   .btn--send {
     align-self: center;
   }
-  .icon-list--contact .icon-list__item i {
-    font-size: 1.9rem;
-    height: 1.55em;
-    width: 1.55em;
+  .icon-list__link {
+    font-size: 1.8rem;
+    height: 1.6em;
+    width: 1.6em;
   }
 }
 

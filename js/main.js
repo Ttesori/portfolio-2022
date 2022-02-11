@@ -3,6 +3,14 @@ const els = {
   navList: document.querySelector('.nav__list')
 }
 
+const classes = {
+  navToggle: 'nav-toggle--display',
+  toggleOpen: 'nav-toggle--open',
+  listClosed: 'nav__list--closed',
+  listOpen: 'nav__list--open',
+  linkActive: 'nav__link--active'
+}
+
 const init = () => {
   setUpMenu();
   toggleMenu();
@@ -11,11 +19,11 @@ const init = () => {
 
 const setUpMenu = () => {
   els.navToggle.addEventListener('click', toggleMenu);
-  els.navToggle.classList.add('nav-toggle--display');
+  els.navToggle.classList.add(classes.navToggle);
 }
 
 const toggleMenu = () => {
-  if (els.navList.classList.contains('nav__list--closed')) {
+  if (els.navList.classList.contains(classes.listClosed)) {
     openMenu();
   } else {
     closeMenu();
@@ -23,28 +31,30 @@ const toggleMenu = () => {
 }
 
 const closeMenu = () => {
-  els.navList.classList.remove('nav__list--open');
-  els.navList.classList.add('nav__list--closed');
-  els.navToggle.classList.remove('nav-toggle--open');
+  els.navList.classList.remove(classes.listOpen);
+  els.navList.classList.add(classes.listClosed);
+  els.navToggle.classList.remove(classes.toggleOpen);
 }
 const openMenu = () => {
   els.navList.classList.remove('nav__list--closed');
-  els.navList.classList.add('nav__list--open');
-  els.navToggle.classList.add('nav-toggle--open');
+  els.navList.classList.add(classes.listOpen);
+  els.navToggle.classList.add(classes.toggleOpen);
 }
 
 const addObserver = () => {
   const observer = new IntersectionObserver(entries => entries.forEach(entry => {
     const id = entry.target.getAttribute('id');
-    if (entry.intersectionRatio > 0) {
-      console.log(id, entry.intersectionRatio)
-      document.querySelector('.nav__link--active').classList.remove('nav__link--active');
-      document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('nav__link--active');
+    if (entry.isIntersecting && window.scrollY > 0) {
+      document.querySelector(`.${classes.linkActive}`).classList.remove(classes.linkActive);
+      document.querySelector(`nav li a[href="#${id}"]`).classList.add(classes.linkActive);
     }
-  }));
+  }), {
+    threshold: window.innerWidth > 980 ? .75 : .1, // 75% or 10% of el is visible
+    rootMargin: '-200px 0px 0px 0px', // top margin is 200px from the top
+  });
   document.querySelectorAll('section[id]').forEach((section) => {
     observer.observe(section);
   })
 }
 
-init();
+window.addEventListener('DOMContentLoaded', init);
