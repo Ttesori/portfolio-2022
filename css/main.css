@@ -391,6 +391,7 @@ code {
 
 .icon-list__item {
   margin-bottom: 0.25em;
+  font-size: 1.1rem;
 }
 
 .icon-list__item i {
@@ -398,8 +399,8 @@ code {
   color: var(--primary);
   padding: 0.35em 0.25em 0.25em;
   margin-right: 0.35em;
-  width: 40px;
-  height: 40px;
+  width: 1.7em;
+  height: 1.7em;
   font-size: 1.5rem;
   text-align: center;
   border-radius: 50%;
@@ -689,6 +690,13 @@ code {
     border: 0;
   }
 
+  #home,
+  #about,
+  #work,
+  #contact {
+    scroll-margin-top: 10em;
+  }
+
   .hero__title {
     font-size: 3.75rem;
   }
@@ -952,11 +960,33 @@ code {
 }
 
 @media screen and (min-width: 1110px) {
+  :root {
+    font-size: 18px;
+  }
+  .main-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  .section__copy,
+  .section__links {
+    max-width: 100%;
+  }
+  .about {
+    grid-template-columns: 3fr 2fr;
+  }
   .portfolio {
     grid-template-columns: repeat(3, 1fr);
+    max-width: 1400px;
+    gap: 4.5em;
   }
   .portfolio-item:last-child {
     grid-column-start: auto;
     grid-column-end: auto;
+  }
+  .form__label {
+    font-size: 1.1rem;
+  }
+  .contact {
+    max-width: 1250px;
   }
 }

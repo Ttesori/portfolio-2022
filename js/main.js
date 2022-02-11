@@ -49,7 +49,7 @@ const addObserver = () => {
       document.querySelector(`nav li a[href="#${id}"]`).classList.add(classes.linkActive);
     }
   }), {
-    threshold: window.innerWidth > 980 ? .75 : .1, // 75% or 10% of el is visible
+    threshold: window.innerWidth > 980 ? .75 : .2, // 75% or 10% of el is visible
     rootMargin: '-200px 0px 0px 0px', // top margin is 200px from the top
   });
   document.querySelectorAll('section[id]').forEach((section) => {
