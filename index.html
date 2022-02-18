@@ -5,11 +5,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toni Tesori | Full-stack Web Developer | JavaScript, React, NodeJS, MongoDB, MySQL</title>
+  <meta name="title" property="og:title" content="Tesori Design &amp; Development" />
+  <meta name="image" property="og:image" content="/img/ttsite-screenshot.png" />
+  <meta name="description" property="og:description"
+    content="The personal portfolio of a full-stack web developer, featuring skills, experience and contact information." />
+  <title>Toni Tesori | Full-stack Web Developer | JavaScript, ReactJS, NodeJS, MongoDB, MySQL</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/main.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6N77E1VKW8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-6N77E1VKW8');
+  </script>
 </head>
 
 <body>
@@ -218,7 +229,8 @@
         <h3 class="section__subtitle"><i class="fas fa-envelope"></i>
           Send a Message</h3>
         <p class="message--required">All fields are required.</p>
-        <form class="form contact__form">
+        <form class="form contact__form" method="post" name="contact">
+          <input type='hidden' name='form-name' value='contact' />
           <div class="form__input-group">
             <label for="name" class="form__label">Name</label>
             <input type="text" id="name" name="name" class="form__input-text" placeholder="Your Name" required>
