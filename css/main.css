@@ -209,13 +209,13 @@ code {
 }
 
 .nav__list--open {
-  animation: nav 1s;
+  animation: nav 0.3s;
   transform: scaleY(1);
 }
 
 .nav__list--closed {
   transform: scaleY(0);
-  animation: nav2 1s;
+  animation: nav2 0.3s;
   height: 0;
 }
 
