@@ -498,6 +498,10 @@ code {
   gap: 1em;
 }
 
+.link--single {
+  grid-template-columns: 1fr;
+}
+
 .icon-list--contact {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
