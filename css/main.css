@@ -100,11 +100,22 @@ code {
   text-decoration: none;
 }
 
-.btn--text {
+.btn--text,
+.link {
   background: none;
   color: var(--primary);
   text-decoration: underline var(--primary-25) 2px;
   text-underline-offset: 3px;
+  transition: all 0.2s;
+}
+
+.link {
+  font-weight: bold;
+}
+
+.link:hover {
+  color: var(--primary-lt);
+  text-decoration: underline var(--secondary) 2px;
 }
 
 .btn--lg {
@@ -350,6 +361,9 @@ code {
 
 .main-section--full {
   padding: 2em 0;
+}
+
+.link {
 }
 
 .section__title {
