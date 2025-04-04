@@ -101,7 +101,7 @@ code {
 }
 
 .btn--text,
-.link {
+.link--text {
   background: none;
   color: var(--primary);
   text-decoration: underline var(--primary-25) 2px;
@@ -109,11 +109,11 @@ code {
   transition: all 0.2s;
 }
 
-.link {
+.link--text {
   font-weight: bold;
 }
 
-.link:hover {
+.link--text:hover {
   color: var(--primary-lt);
   text-decoration: underline var(--secondary) 2px;
 }
@@ -302,10 +302,23 @@ code {
   fill: var(--primary);
 }
 
+.main-section {
+  padding: 1.5em;
+  margin: 1.5em 0;
+}
+
+.main-section--full {
+  padding: 2em 0;
+}
+
 .hero,
 .main-section {
   padding: 2em 0;
   position: relative;
+}
+
+.hero {
+  margin-top: 0;
 }
 
 .hero__overlay,
@@ -352,15 +365,6 @@ code {
 .btn--hero {
   margin: 0 auto;
   font-size: 1.1rem;
-}
-
-.main-section {
-  padding: 1.5em;
-  margin: 1.5em 0;
-}
-
-.main-section--full {
-  padding: 2em 0;
 }
 
 .link {
