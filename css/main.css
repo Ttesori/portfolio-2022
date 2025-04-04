@@ -536,7 +536,7 @@ code {
   padding: 0.21em;
   width: 1.7em;
   height: 1.7em;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   text-align: center;
   border-radius: 50%;
   display: inline-block;
@@ -621,7 +621,7 @@ code {
 
 .contact__section--form .section__subtitle i {
   color: var(--primary-lt);
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   padding-right: 0.2em;
 }
 
@@ -760,7 +760,7 @@ code {
 
   .portfolio-item__links,
   .icon-list--contact {
-    max-width: 400px;
+    max-width: 350px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -954,6 +954,11 @@ code {
     padding-left: 1em;
     padding-right: 1em;
   }
+
+  .icon-list--contact {
+    margin-top: 1.5em;
+  }
+
   .contact__section:first-child {
     border: 0;
     margin: 0;
@@ -980,9 +985,10 @@ code {
     align-self: center;
   }
   .icon-list__link {
-    font-size: 1.8rem;
-    height: 1.6em;
-    width: 1.6em;
+    font-size: 1.6rem;
+    height: 1.7em;
+    width: 1.7em;
+    padding: 0.3em;
   }
 }
 
