@@ -328,7 +328,7 @@ code {
   right: 0;
   left: 0;
   bottom: 0;
-  background: url(../img/bkg-code.jpg);
+  background: url(../img/bkg-code.webp);
   background-size: 800px;
   background-attachment: fixed;
   filter: opacity(0.08);
